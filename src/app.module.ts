@@ -1,10 +1,14 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { UsersModule } from './users/users.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://localhost:27017/my_app_nest-crud', {
+    ConfigModule.forRoot({
+      isGlobal:true,
+    }),
+    MongooseModule.forRoot(process.env.MY_DATABASE, {
           }),
     UsersModule,
   ],
