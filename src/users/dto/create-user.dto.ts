@@ -13,7 +13,7 @@ export class CreateUserDto {
   @Min(6)
   password: string;
 
-  @IsOptional()  // Age is optional
+  @IsOptional() 
   @IsInt()
   @IsOptional()
   age?: number;

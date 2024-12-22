@@ -4,19 +4,19 @@ export class UpdateUserDto {
   @IsString()
   @Min(3)
   @MaxLength(50)
-  @IsOptional() // Make name optional during update
+  @IsOptional() 
   name?: string;
 
   @IsEmail()
-  @IsOptional() // Make email optional during update
+  @IsOptional() 
   email?: string;
 
   @IsString()
   @Min(6)
-  @IsOptional() // Make password optional during update
+  @IsOptional() 
   password?: string;
 
   @IsInt()
-  @IsOptional() // Make age optional during update
+  @IsOptional() 
   age?: number;
 }
